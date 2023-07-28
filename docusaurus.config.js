@@ -42,14 +42,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/pengshengjie/blog/blob/main",
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/pengshengjie/blog/blob/main",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -140,7 +140,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `<a href="https://beian.miit.gov.cn/" target="_blank">Copyright © ${new Date().getFullYear()} CodingJ's Blog, 蜀ICP备2023019010号</a>`,
       },
       prism: {
         theme: lightCodeTheme,
