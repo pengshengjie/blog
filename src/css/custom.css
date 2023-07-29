@@ -31,3 +31,7 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
   --body-bg-color: #1b1b1d
 }
+
+[data-theme='dark'] .alert {
+  background-color: #122;
+}
