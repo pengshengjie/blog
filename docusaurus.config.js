@@ -105,7 +105,7 @@ const config = {
             items: [
               {
                 label: "Tutorial",
-                to: "/docs/ecma262/介绍",
+                to: "/docs/frontenddesign",
               },
             ],
           },
