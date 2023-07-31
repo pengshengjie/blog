@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 5
 ---
 
-# 算法
+# 数据结构与算法
