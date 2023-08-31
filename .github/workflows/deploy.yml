@@ -1,0 +1,31 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - main # Trigger this workflow on pushes to the main branch.
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      
+      - name: Deploy to Server
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SERVER_ADDRESS: ${{ secrets.SERVER_ADDRESS }}
+          SERVER_USERNAME: ${{ secrets.SERVER_USERNAME }}
+          SERVER_DESTINATION: ${{ secrets.SERVER_DESTINATION }}
+        run: |
+          # Install SSH agent and configure the key
+          sudo apt-get install -y sshpass
+          echo "$SSH_PRIVATE_KEY" > private_key
+          chmod 600 private_key
+          
+          # Deploy the code
+          rsync -e "sshpass -e ssh -i private_key -o StrictHostKeyChecking=no" -avr --exclude ".git/" --exclude ".github/" * "${SERVER_USERNAME}@${SERVER_ADDRESS}:${SERVER_DESTINATION}"
+
+          # Clean up the private key
+          rm -f private_key
