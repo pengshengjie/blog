@@ -25,6 +25,9 @@ jobs:
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > private_key
           chmod 600 private_key
           
+          # Ensure the destination directory exists
+          sshpass -p "${{ secrets.SERVER_PASSWORD }}" ssh -i private_key -o StrictHostKeyChecking=no "${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_ADDRESS }}" "mkdir -p ${ { secrets.SERVER_DESTINATION }}"
+          
           # Deploy the code
           rsync -e 'sshpass -p "${{ secrets.SERVER_PASSWORD }}" ssh -i private_key -o StrictHostKeyChecking=no' -avr --exclude ".git/" --exclude ".github/" * "${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_ADDRESS }}:${{ secrets.SERVER_DESTINATION }}"
           
