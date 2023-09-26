@@ -1,0 +1,2 @@
+# react-jsx2pdf
+!()[]

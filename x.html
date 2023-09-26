@@ -1,0 +1,748 @@
+<style rc-util-key="@ant-design-icons">
+  .anticon {
+    display: inline-block;
+    color: inherit;
+    font-style: normal;
+    line-height: 0;
+    text-align: center;
+    text-transform: none;
+    vertical-align: -0.125em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .anticon>* {
+    line-height: 1;
+  }
+
+  .anticon svg {
+    display: inline-block;
+  }
+
+  .anticon::before {
+    display: none;
+  }
+
+  .anticon .anticon-icon {
+    display: block;
+  }
+
+  .anticon[tabindex] {
+    cursor: pointer;
+  }
+
+  .anticon-spin::before,
+  .anticon-spin {
+    display: inline-block;
+    -webkit-animation: loadingCircle 1s infinite linear;
+    animation: loadingCircle 1s infinite linear;
+  }
+
+  @-webkit-keyframes loadingCircle {
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes loadingCircle {
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+</style>
+<meta http-equiv="origin-trial"
+  content="Az520Inasey3TAyqLyojQa8MnmCALSEU29yQFW8dePZ7xQTvSt73pHazLFTK5f7SyLUJSo2uKLesEtEa9aUYcgMAAACPeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IkRpc2FibGVUaGlyZFBhcnR5U3RvcmFnZVBhcnRpdGlvbmluZyIsImV4cGlyeSI6MTcyNTQwNzk5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0=">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Austin Capital Trust | BankerView</title>
+
+<meta name="referrer" content="origin">
+
+<link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Barlow:500%7CLato:regular%7CLato:900%7CNunito+Sans:regular%7CNunito+Sans:700%7CNunito:regular%7CRoboto:regular%7CRoboto:regular%7CRoboto:500%7CRoboto:900%7CRoboto:700%7CSarabun:regular">
+
+<link rel="icon" type="image/png"
+  href="https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2F9dce8aae744798080f552f1830d58d18.cdn.bubble.io%2Ff1656527850945x518938284849680640%2Fcropped-small_logo-32x32.png?w=128&amp;h=&amp;auto=compress&amp;dpr=1&amp;fit=max">
+<meta name="fragment" content="!">
+<meta name="description" content="Austin Capital Trust">
+<meta property="og:title" content="Austin Capital Trust">
+<meta name="twitter:title" content="Austin Capital Trust">
+<meta property="og:site_name" content="Austin Capital Trust">
+<meta name="twitter:site_name" content="Austin Capital Trust">
+<meta property="og:description" content="Austin Capital Trust">
+<meta name="twitter:description" content="Austin Capital Trust">
+<meta property="og:url" content="https://client.austincapitaltrust.com/version-test/bankerview">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<link type="text/css"
+  href="https://client.austincapitaltrust.com/package/run_css/8fed16250d29d95141650467c51850523ae17d023297bdc714151d0e4afb49f6/actc-clientview/test/bankerview/xfalse/xfalse/run.css"
+  rel="stylesheet">
+<link rel="stylesheet"
+  href="https://9dce8aae744798080f552f1830d58d18.cdn.bubble.io/f1529535883505x638509931974113000/iziToast.min.css">
+
+<style>
+  .Button {
+    position: relative;
+    overflow: hidden;
+    user-drag: none;
+    user-select: none;
+  }
+
+  .Button .ink {
+    display: block;
+    position: absolute;
+    background: white;
+    opacity: 0.8;
+    border-radius: 100%;
+    will-change: transform;
+    transform: scale(0);
+  }
+
+  .Button .ink.is-animating {
+    animation: ripple 0.4s linear;
+  }
+
+  @keyframes ripple {
+    0% {
+      opacity: 0.8;
+      transform: scale(0);
+    }
+
+    100% {
+      opacity: 0;
+      transform: scale(1.5);
+    }
+  }
+</style>
+<style>
+  .material-icons {
+    position: relative;
+    overflow: hidden;
+    user-drag: none;
+    user-select: none;
+  }
+
+  .material-icons .ink {
+    display: block;
+    position: absolute;
+    background: white;
+    opacity: 0.8;
+    border-radius: 100%;
+    will-change: transform;
+    transform: scale(0);
+  }
+
+  .material-icons .ink.is-animating {
+    animation: ripple 0.4s linear;
+  }
+
+  @keyframes ripple {
+    0% {
+      opacity: 0.8;
+      transform: scale(0);
+    }
+
+    100% {
+      opacity: 0;
+      transform: scale(1.5);
+    }
+  }
+</style>
+
+<style>
+  .fa {
+    position: relative;
+    overflow: hidden;
+    user-drag: none;
+    user-select: none;
+  }
+
+  .fa .ink {
+    display: block;
+    position: absolute;
+    background: white;
+    opacity: 0.8;
+    border-radius: 100%;
+    will-change: transform;
+    transform: scale(0);
+  }
+
+  .fa .ink.is-animating {
+    animation: ripple 0.4s linear;
+  }
+
+  @keyframes ripple {
+    0% {
+      opacity: 0.8;
+      transform: scale(0);
+    }
+
+    100% {
+      opacity: 0;
+      transform: scale(1.5);
+    }
+  }
+</style>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<style>
+  html {
+    background: none !important;
+  }
+
+  #client_list_root {
+    line-height: 1 !important;
+    font-family: "Roboto" !important;
+  }
+
+  body {
+    line-height: 1 !important;
+  }
+
+  .ant-modal-mask {
+    z-index: 1000000 !important;
+  }
+
+  .ant-modal {
+    z-index: 1000000 !important;
+  }
+
+  .ant-modal-wrap {
+    z-index: 10000000 !important;
+  }
+
+  .org-tree-container {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .ips-button-right {
+    display: flex
+  }
+
+  .email-drawer-container .ant-drawer-content {
+    margin-top: 80px !important;
+    overflow-y: scroll;
+    height: calc(100vh - 80px) !important
+  }
+
+  #client_list_root .csr-email-notification {
+    top: 100px;
+    z-index: 1001;
+    position: fixed !important;
+  }
+</style>
+<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/design-system/2.13.7/styles/salesforce-lightning-design-system.min.css">
+<link
+  href="https://9dce8aae744798080f552f1830d58d18.cdn.bubble.io/f1694443608662x689467184060018200/2.a8c80098.chunk.css"
+  rel="stylesheet">
+<link
+  href="https://9dce8aae744798080f552f1830d58d18.cdn.bubble.io/f1694443630582x401264866616718460/main.a80e368e.chunk.css"
+  rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<style>
+  html {
+    background: none !important;
+  }
+
+  #communication_root {
+    line-height: 1 !important;
+    font-family: "Roboto" !important;
+  }
+
+  .ant-modal-mask {
+    z-index: 1000000 !important;
+  }
+
+  .ant-modal {
+    z-index: 1000000 !important;
+  }
+
+  .ant-modal-wrap {
+    z-index: 10000000 !important;
+  }
+
+  .org-tree-container {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .ips-button-right {
+    display: flex
+  }
+
+  #communication_root .ant-drawer-content {
+    margin-top: 80px;
+  }
+
+  #communication_root .fixedBox {
+    margin-top: 80px !important;
+  }
+
+  #communication_root .ant-popover-buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  #communication_root .ant-popover-buttons button {
+    display: inline-block !important;
+  }
+
+  #communication_root .ant-modal-footer .ant-btn {
+    display: inline-block !important;
+  }
+
+  #communication_root .ant-notification {
+    left: 50% !important;
+    top: 84px !important;
+    right: auto !important;
+    transform: translate(-50%, 0%) !important;
+    width: 100% !important;
+  }
+
+  #communication_root .ant-notification-notice {
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 auto !important;
+  }
+
+  #communication_root .others-hung-up,
+  #communication_root .recording-text {
+    left: calc(100% - 384px) !important;
+    margin: 0 !important;
+    position: absolute;
+    top: 0;
+  }
+
+  #communication_root .csr-email-notification,
+  .csr-email-notification {
+    right: 20px !important;
+    left: auto !important;
+    position: fixed !important;
+  }
+
+  #communication_root .ant-select-dropdown {
+    width: 130px !important;
+  }
+</style>
+<link href="https://9dce8aae744798080f552f1830d58d18.cdn.bubble.io/f1695056060171x991335973492204700/main.dffdacf3.css"
+  rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+<style>
+  html {
+    background: none !important;
+  }
+
+  body {
+    line-height: 1 !important;
+    font-family: "Roboto", sans-serif !important;
+  }
+
+  .ant-modal-mask {
+    z-index: 1000000 !important;
+  }
+
+  .ant-modal {
+    z-index: 1000000 !important;
+  }
+
+  .ant-modal-wrap {
+    z-index: 10000000 !important;
+  }
+
+  .org-tree-container {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .ips-button-right {
+    display: flex
+  }
+</style>
+<link
+  href="https://9dce8aae744798080f552f1830d58d18.cdn.bubble.io/f1692979816881x997216964295091800/2.ad959054.chunk.css"
+  rel="stylesheet">
+<link
+  href="https://9dce8aae744798080f552f1830d58d18.cdn.bubble.io/f1692979837948x690953287207857200/main.ae24d2e4.chunk.css"
+  rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+<style>
+  html {
+    background: none !important;
+    height: 100% !important;
+  }
+
+  body {
+    line-height: 1 !important;
+    font-family: "Roboto", sans-serif !important;
+    height: 100% !important;
+  }
+
+  .ant-modal-mask {
+    z-index: 1000000 !important;
+  }
+
+  .ant-modal {
+    z-index: 1000000 !important;
+  }
+
+  .ant-modal-wrap {
+    z-index: 10000000 !important;
+  }
+
+  .org-tree-container {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .ips-button-right {
+    display: flex
+  }
+
+  .bubble-r-container-wrapper {
+    min-height: 100vh !important
+  }
+</style>
+<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/design-system/2.13.7/styles/salesforce-lightning-design-system.min.css">
+<link
+  href="https://9dce8aae744798080f552f1830d58d18.cdn.bubble.io/f1686908496292x467884595504554050/2.7f215b46.chunk.css"
+  rel="stylesheet">
+<link
+  href="https://9dce8aae744798080f552f1830d58d18.cdn.bubble.io/f1686908510180x128998513665887550/main.9ca86a24.chunk.css"
+  rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap" rel="stylesheet">
+<style id="scrollbar">
+  /* width */
+  #scroll::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  #scroll::-webkit-scrollbar-track {
+    background: rgba(230, 230, 230, 1);
+    box-shadow: inset 0 0 5px #e6e6e6;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  #scroll::-webkit-scrollbar-thumb {
+    background: rgba(153, 153, 153, 1);
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  #scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(199, 199, 199, 1);
+  }
+</style>
+<style data-id="immersive-translate-input-injected-css">
+  .immersive-translate-input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2147483647;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .immersive-translate-input-loading {
+    --loading-color: #f78fb6;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    display: block;
+    margin: 12px auto;
+    position: relative;
+    color: white;
+    left: -100px;
+    box-sizing: border-box;
+    animation: immersiveTranslateShadowRolling 1.5s linear infinite;
+  }
+
+  @keyframes immersiveTranslateShadowRolling {
+    0% {
+      box-shadow: 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+    }
+
+    12% {
+      box-shadow: 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+    }
+
+    25% {
+      box-shadow: 110px 0 var(--loading-color), 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+    }
+
+    36% {
+      box-shadow: 120px 0 var(--loading-color), 110px 0 var(--loading-color), 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0);
+    }
+
+    50% {
+      box-shadow: 130px 0 var(--loading-color), 120px 0 var(--loading-color), 110px 0 var(--loading-color), 100px 0 var(--loading-color);
+    }
+
+    62% {
+      box-shadow: 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color), 120px 0 var(--loading-color), 110px 0 var(--loading-color);
+    }
+
+    75% {
+      box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color), 120px 0 var(--loading-color);
+    }
+
+    87% {
+      box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color);
+    }
+
+    100% {
+      box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0);
+    }
+  }
+
+
+  .immersive-translate-search-recomend {
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    position: relative;
+    font-size: 16px;
+  }
+
+  .immersive-translate-search-enhancement-en-title {
+    color: #4d5156;
+  }
+
+  /* dark */
+  @media (prefers-color-scheme: dark) {
+    .immersive-translate-search-recomend {
+      border: 1px solid #3c4043;
+    }
+
+    .immersive-translate-close-action svg {
+      fill: #bdc1c6;
+    }
+
+    .immersive-translate-search-enhancement-en-title {
+      color: #bdc1c6;
+    }
+  }
+
+
+  .immersive-translate-search-settings {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+  }
+
+  .immersive-translate-search-recomend::before {
+    /* content: " "; */
+    /* width: 20px; */
+    /* height: 20px; */
+    /* top: 16px; */
+    /* position: absolute; */
+    /* background: center / contain url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAxlBMVEUAAADpTInqTIjpSofnSIfqS4nfS4XqS4nqTIjsTYnrTInqTIroS4jvQIDqTIn////+/v7rSYjpTIn8/v7uaZzrTIr9/f3wfansWJL88/b85e73qc39+/v3xNnylrvrVI/98fb62Obva5/8+fr76vH4y9zpSIj74e353Oj1ocTzm77xhK/veKbtYpjsXJTqU47oTInxjrXyh7L99fj40eH2ttH1udD3sc31ssz1rMnykLXucqPtbqD85e/1xdn2u9DzqcXrUY6FaJb8AAAADnRSTlMA34BgIM8Q37/fz7+/EGOHcVQAAAGhSURBVDjLhZPncuowEEZFTW7bXVU7xsYYTO/p7bb3f6lICIOYJOT4h7/VnFmvrBFjrF3/CR/SajBHswafctG0Qg3O8O0Xa8BZ6uw7eLjqr30SofCDVSkemMinfL1ecy20r5ygR5zz3ArcAqJExPTPKhDENEmS30Q9+yo4lEQkqVTiIEAHCT10xWERRdH0Bq0aCOPZNDV3s0xaYce1lHEoDHU8wEh3qRJypNcTAeKUIjgKMeGLDoRCLVLTVf+Ownj8Kk6H9HM6QXPgYjQSB0F00EJEu10ILQrs/QeP77BSSr0MzLOyuJJQbnUoOOIUI/A8EeJk9E4YUHUWiRyTVKGgQUB8/3e/NpdGlfI+FMQyWsCBWyz4A/ZyHXyiiz0Ne5aGZssoxRmcChw8/EFKQ5JwwkUo3FRT5yXS7q+Y/rHDZmFktzpGMvO+5QofA4FPpEmGw+EWRCFvnaof7Zhe8NuYSLR0xErKLThUSs8gnODh87ssy6438yzbLzxl012HS19vfCf3CNhnbWOL1eEsDda+gDPUvri8tSZzNFrwIZf1NmNvqC1I/t8j7nYAAAAASUVORK5CYII='); */
+  }
+
+  .immersive-translate-search-title {}
+
+  .immersive-translate-search-title-wrapper {}
+
+  .immersive-translate-search-time {
+    font-size: 12px;
+    margin: 4px 0 24px;
+    color: #70757a;
+  }
+
+  .immersive-translate-expand-items {
+    display: none;
+  }
+
+  .immersive-translate-search-more {
+    margin-top: 16px;
+    font-size: 14px;
+  }
+
+  .immersive-translate-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    font-size: 15px;
+  }
+
+  .immersive-translate-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    font-family: system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
+      "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol", "Noto Color Emoji";
+  }
+
+  .immersive-translate-modal-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: hsl(205, 20%, 32%);
+  }
+
+  .immersive-translate-modal-body {
+    color: hsl(205, 20%, 32%)
+  }
+
+  .immersive-translate-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .immersive-translate-close:hover,
+  .immersive-translate-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .immersive-translate-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .immersive-translate-btn {
+    color: #fff;
+    background-color: #ea4c89;
+    border: none;
+    font-size: 14px;
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .immersive-translate-cancel-btn {
+    /* gray color */
+    background-color: rgb(89, 107, 120);
+  }
+
+  .immersive-translate-btn:hover {
+    background-color: #f082ac;
+  }
+
+  .immersive-translate-cancel-btn:hover {
+    background-color: hsl(205, 20%, 32%);
+  }
+
+
+  .immersive-translate-btn svg {
+    margin-right: 5px;
+  }
+
+  .immersive-translate-link {
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-drag: none;
+    text-decoration: none;
+    color: #007bff;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, .1);
+  }
+
+  .immersive-translate-primary-link {
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-drag: none;
+    text-decoration: none;
+    color: #ea4c89;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, .1);
+  }
+
+  .immersive-translate-modal input[type="radio"] {
+    margin: 0 6px;
+    cursor: pointer;
+  }
+
+  .immersive-translate-modal label {
+    cursor: pointer;
+  }
+
+  .immersive-translate-close-action {
+    position: absolute;
+    top: 2px;
+    right: 0px;
+    cursor: pointer;
+  }
+</style>
+<style rc-util-key="-ant-1695569690976-0.6084363239384267-dynamic-theme">
+  :root {
+    --ant-primary-color: rgb(12, 45, 84);
+    --ant-primary-color-disabled: #697b87;
+    --ant-primary-color-hover: #1d3e61;
+    --ant-primary-color-active: #000308;
+    --ant-primary-color-outline: rgba(12, 45, 84, 0.2);
+    --ant-primary-color-deprecated-bg: #697b87;
+    --ant-primary-color-deprecated-border: #32516e;
+    --ant-primary-1: #8b9094;
+    --ant-primary-2: #697b87;
+    --ant-primary-3: #4c657a;
+    --ant-primary-4: #32516e;
+    --ant-primary-5: #1d3e61;
+    --ant-primary-6: #0c2d54;
+    --ant-primary-7: #04162e;
+    --ant-primary-8: #000308;
+    --ant-primary-9: #000000;
+    --ant-primary-10: #000000;
+    --ant-primary-color-deprecated-l-35: rgb(49, 130, 226);
+    --ant-primary-color-deprecated-l-20: rgb(25, 93, 173);
+    --ant-primary-color-deprecated-t-20: rgb(61, 87, 118);
+    --ant-primary-color-deprecated-t-50: rgb(134, 150, 170);
+    --ant-primary-color-deprecated-f-12: rgba(12, 45, 84, 0.12);
+    --ant-primary-color-active-deprecated-f-30: rgba(139, 144, 148, 0.3);
+    --ant-primary-color-active-deprecated-d-02: rgb(134, 139, 143);
+  }
+</style>
+<style data-emotion="css" data-s=""></style>
+<style data-emotion="css" data-s=""></style>
+<style data-styled="active" data-styled-version="5.3.5"></style>
