@@ -13,22 +13,39 @@
     * @param {string} s
     * @return {number}
     */
-   var lengthOfLongestSubstring = function(s) {
-     const arr = [];
-     let start = 0;
-     let max = 0;
-     const len = s.length;
-     for(let end = 0; end < len; end ++) {
+    var findMedianSortedArrays = function (nums1, nums2) {
+      const halfLen = (nums1.length + nums2.length) / 2
+      const len = Math.floor(halfLen);
+      let l1 = 0;
+      let l2 = 0;
+      let left = 0;
+      let right = 0;
       debugger
-       let char = s.charCodeAt(end);
-       start = Math.max(start, arr[char] || 0);
-       max = Math.max(max, end -start + 1)
-       arr[char] = end
+      for (let i = 0; i <= len; i++) {
+        left = right;
+        if(nums1.length <= l1) {
+          right = nums2[l2++]
+          continue
+        }else if (nums2.length <= l2) {
+          right = nums1[l1++]
+          continue
+        }
+        if(nums1[l1] > nums2[l2]) {
+          right = nums2[l2++]
+        }else {
+          right = nums1[l1++]
+        }
 
-     }
-     return max
-   };
-   lengthOfLongestSubstring("abc")
+      }
+      if (halfLen === len) {
+        return (left + right) / 2
+
+      } else {
+        return right
+      }
+    };
+    console.log('',     findMedianSortedArrays([2], []));
+
   </script>
 </body>
 
