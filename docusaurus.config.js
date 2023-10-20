@@ -18,8 +18,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "pengshengjie", // Usually your GitHub org/user name.
+  // projectName: "docusaurus", // Usually your repo name.
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -91,83 +91,84 @@ const config = {
           // { to: "/blog", label: "Blog", position: "left" },
 
           {
-            href: "https://github.com/facebook/docusaurus",
+            href: "https://github.com/pengshengjie",
             label: "GitHub",
             position: "right",
           },
         ],
       },
-      footer: {
-        style: "dark",
-        links: [
-          {
-            title: "Docs",
-            items: [
-              {
-                label: "Tutorial",
-                to: "/docs/frontenddesign",
-              },
-            ],
-          },
-          {
-            title: "Community",
-            items: [
-              {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
-              },
-              {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
-              },
-            ],
-          },
-          {
-            title: "More",
-            items: [
-              {
-                label: "Blog",
-                to: "/blog",
-              },
-              {
-                label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
-              },
-            ],
-          },
-        ],
-        copyright: `<a href="https://beian.miit.gov.cn/" target="_blank">Copyright © ${new Date().getFullYear()} CodingJ's Blog, 蜀ICP备2023019010号</a>`,
-      },
+      // footer: {
+      //   style: "dark",
+      //   // links: [
+      //   //   {
+      //   //     title: "Docs",
+      //   //     items: [
+      //   //       {
+      //   //         label: "Tutorial",
+      //   //         to: "/docs/frontenddesign",
+      //   //       },
+      //   //     ],
+      //   //   },
+      //   //   {
+      //   //     title: "Community",
+      //   //     items: [
+      //   //       {
+      //   //         label: "Stack Overflow",
+      //   //         href: "https://stackoverflow.com/questions/tagged/docusaurus",
+      //   //       },
+      //   //       {
+      //   //         label: "Discord",
+      //   //         href: "https://discordapp.com/invite/docusaurus",
+      //   //       },
+      //   //       {
+      //   //         label: "Twitter",
+      //   //         href: "https://twitter.com/docusaurus",
+      //   //       },
+      //   //     ],
+      //   //   },
+      //   //   {
+      //   //     title: "More",
+      //   //     items: [
+      //   //       {
+      //   //         label: "Blog",
+      //   //         to: "/blog",
+      //   //       },
+      //   //       {
+      //   //         label: "GitHub",
+      //   //         href: "https://github.com/facebook/docusaurus",
+      //   //       },
+      //   //     ],
+      //   //   },
+      //   // ],
+      //   // copyright: `<a href="https://beian.miit.gov.cn/" target="_blank">Copyright © ${new Date().getFullYear()} CodingJ's Blog, 蜀ICP备2023019010号</a>`,
+      // },
       prism: {
-        theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+        theme: lightCodeTheme,
       },
-      algolia: {
-        apiKey: 'cb929fb7c04c08f0a6f82641efda514b',
-        indexName: 'codingj_top',
-        appId: '734SLMDMGB',
-              // Optional: see doc section below
-      contextualSearch: true,
+      // algolia: {
+      //   apiKey: 'cb929fb7c04c08f0a6f82641efda514b',
+      //   indexName: 'codingj_top',
+      //   appId: '734SLMDMGB',
+      //         // Optional: see doc section below
+      // contextualSearch: true,
 
-      // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-      externalUrlRegex: 'https://www.codingj.top/',
+      // // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+      // externalUrlRegex: 'https://www.codingj.top/',
 
-      // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
-      replaceSearchResultPathname: {
-        from: '/docs/', // or as RegExp: /\/docs\//
-        to: '/',
-      },
-      // Optional: Algolia search parameters
-      searchParameters: {},
-      // Optional: path for search page that enabled by default (`false` to disable it)
-      searchPagePath: 'search',
-      //... other Algolia params
-      }
+      // // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+      // replaceSearchResultPathname: {
+      //   from: '/docs/', // or as RegExp: /\/docs\//
+      //   to: '/',
+      // },
+      // // Optional: Algolia search parameters
+      // searchParameters: {},
+      // // Optional: path for search page that enabled by default (`false` to disable it)
+      // searchPagePath: 'search',
+      // //... other Algolia params
+      // }
     }),
+    plugins: []
 };
 
 module.exports = config;
