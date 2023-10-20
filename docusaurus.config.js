@@ -72,7 +72,7 @@ const config = {
         items: [
           {
             type: "doc",
-            docId: "frontenddesign/index",
+            docId: "工程化/index",
             position: "left",
             label: "学习笔记",
           },
