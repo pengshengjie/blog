@@ -39,3 +39,22 @@ TypeScript支持
 ## 插件机制
 
 Babel是用插件集成的,使用现有插件或者自定义插件组合你自己的预设
+
+使用 [astexplorer.net](https://astexplorer.net) 即时创建插件或使用生成器-babel-plugin 生成插件模板。
+
+
+```js
+// 这是一个插件的demo
+export default function({ types: t }) {
+  return {
+    visitor: {
+      Identifier(path) {
+        let name = path.node.name; // reverse the name: JavaScript -> tpircSavaJ
+        path.node.name = [...name]
+          .reverse()
+          .join("");
+      },
+    },
+  };
+}
+```
