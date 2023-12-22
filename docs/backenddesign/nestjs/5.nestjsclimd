@@ -1,0 +1,92 @@
+# 5.nestjs cli
+
+## 通过 cli 创建 nestjs 项目
+
+```shell
+npm i -g @nestjs/cli
+```
+
+```shell
+nest new [项目名称]
+```
+
+启动项目
+
+```package.json
+{
+  "start": "nest start",
+  "start:dev": "nest start --watch",
+  "start:debug": "nest start --debug --watch",
+  "start:prod": "node dist/main",
+}
+```
+
+## 目录介绍
+
+### main.ts入口文件
+
+```ts
+// main.ts
+import { NestFactory } from '@nestjs/core';
+import { AppModule } from './app.module';
+
+async function bootstrap() {
+  // 创建Application实例
+  const app = await NestFactory.create(AppModule);
+  // 监听 3000  端口
+  await app.listen(3000);
+}
+bootstrap();
+```
+
+### 控制器
+// app.controller.ts
+
+```ts
+import { Controller, Get } from '@nestjs/common';
+
+@Controller('cats')
+export class CatsController {
+  @Get()
+  findAll() {
+    return 'This action returns all cats';
+  }
+}
+```
+
+### 路由
+
+
+```ts
+// app.module.ts
+import { Module } from '@nestjs/common';
+import { Controller, Get } from '@nestjs/common';
+import { AppService } from './app.service';
+
+@Controller() // 路由前缀
+export class AppController { // 控制器
+  constructor(private readonly appService: AppService) {} // 注入服务
+
+  @Get()
+  getHello(): string {
+    return this.appService.getHello(); // 调用服务
+  }
+}
+
+```
+
+### 服务
+
+AppService可以复用逻辑 抽离Controller 使其业务逻辑和路由进行分离
+
+```ts
+import { Injectable } from '@nestjs/common';
+
+@Injectable()
+export class AppService {
+  getHello(): string {
+    return 'Hello World!';
+  }
+}
+
+```
