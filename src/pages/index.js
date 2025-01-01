@@ -99,9 +99,6 @@ export default function Home() {
         >
           <p></p>
           <p>Hi, I'm CodingJ</p>
-          <p>喜欢折腾的程序员</p>
-          <p>爱好React的全栈开发工程师</p>
-
         </Link>
       </div>
     </Layout>
