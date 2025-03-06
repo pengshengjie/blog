@@ -31,7 +31,7 @@ const config = {
     defaultLocale: "en",
     locales: ["en"],
   },
-
+  clientModules: ['./src/global.js'],
   presets: [
     [
       "classic",
